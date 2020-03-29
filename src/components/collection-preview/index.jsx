@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import CollectionItem from "../collection-item";
+import CollectionItem from '../collection-item';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledCollectionPreview = styled.div`
   display: flex;
@@ -26,8 +26,8 @@ const CollectionPreview = ({ title, items }) => (
     <Preview>
       {items
         .filter((item, idx) => idx < 4)
-        .map(({ id, ...otherItemProps }) => (
-          <CollectionItem key={id} {...otherItemProps} />
+        .map(item => (
+          <CollectionItem key={item.id} item={item} />
         ))}
     </Preview>
   </StyledCollectionPreview>
