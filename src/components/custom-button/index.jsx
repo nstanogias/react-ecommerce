@@ -1,6 +1,47 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const buttonStyles = css`
+  background-color: black;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+`;
+const invertedButtonStyles = css`
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+`;
+
+const googleSignInStyles = css`
+  background-color: #4285f4;
+  color: white;
+
+  &:hover {
+    background-color: #357ae8;
+    border: none;
+  }
+`;
+
+const getButtonStyles = props => {
+  if (props.isGoogleSignIn) {
+    return googleSignInStyles;
+  }
+
+  return props.inverted ? invertedButtonStyles : buttonStyles;
+};
 
 const StyledButton = styled.button`
   min-width: 165px;
@@ -10,8 +51,6 @@ const StyledButton = styled.button`
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: ${props => (props.isGoogleSignIn ? '#4285f4' : 'black')};
-  color: white;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
   font-weight: bolder;
@@ -20,38 +59,11 @@ const StyledButton = styled.button`
   display: flex;
   justify-content: center;
 
-  &:hover {
-    background-color: ${props => (props.isGoogleSignIn ? '#357ae8' : 'white')};
-    color: black;
-    border: ${props => (props.isGoogleSignIn ? 'none' : '1px solid black')};
-  }
-
-  &.inverted {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-
-    &:hover {
-      background-color: black;
-      color: white;
-      border: none;
-    }
-  }
+  ${getButtonStyles}
 `;
 
-const CustomButton = ({
-  children,
-  isGoogleSignIn,
-  inverted,
-  ...otherProps
-}) => (
-  <StyledButton
-    isGoogleSignIn={isGoogleSignIn}
-    className={`${inverted ? 'inverted' : ''} custom-button`}
-    {...otherProps}
-  >
-    {children}
-  </StyledButton>
+const CustomButton = ({ children, ...props }) => (
+  <StyledButton {...props}>{children}</StyledButton>
 );
 
 export default CustomButton;

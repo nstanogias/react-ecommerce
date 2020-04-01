@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { auth } from '../../firebase/firebase.utils';
 
@@ -12,6 +12,10 @@ import { ReactComponent as Logo } from '../../images/shoe.svg';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
+const OptionStyles = css`
+  padding: 10px 15px;
+  cursor: pointer;
+`;
 const StyledHeader = styled.div`
   height: 70px;
   width: 100%;
@@ -38,13 +42,11 @@ const Options = styled.div`
 `;
 
 const OptionsLink = styled(Link)`
-  padding: 10px 15px;
-  cursor: pointer;
+  ${OptionStyles}
 `;
 
 const OptionsDiv = styled.div`
-  padding: 10px 15px;
-  cursor: pointer;
+  ${OptionStyles}
 `;
 const Header = ({ currentUser, hidden }) => (
   <StyledHeader>

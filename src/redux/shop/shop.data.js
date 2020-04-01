@@ -6,56 +6,65 @@ const SHOP_DATA = {
     items: [
       {
         id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        name: 'Air Max',
+        imageUrl:
+          'https://images.pexels.com/photos/786003/pexels-photo-786003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         price: 25
       },
       {
         id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        name: 'Walking',
+        imageUrl:
+          'https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         price: 18
       },
       {
         id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+        name: 'Basketball',
+        imageUrl:
+          'https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         price: 35
       },
       {
         id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+        name: 'Air Max',
+        imageUrl:
+          'https://images.pexels.com/photos/2231435/pexels-photo-2231435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         price: 25
       },
       {
         id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+        name: 'Ultra Boost',
+        imageUrl:
+          'https://images.pexels.com/photos/684152/pexels-photo-684152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         price: 18
       },
       {
         id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+        name: 'Boost',
+        imageUrl:
+          'https://images.pexels.com/photos/233312/pexels-photo-233312.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 14
       },
       {
         id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
+        name: 'Super Star',
+        imageUrl:
+          'https://images.pexels.com/photos/1661470/pexels-photo-1661470.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 18
       },
       {
         id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
+        name: 'Walking',
+        imageUrl:
+          'https://images.pexels.com/photos/3281608/pexels-photo-3281608.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 14
       },
       {
         id: 9,
-        name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
+        name: 'White Boost',
+        imageUrl:
+          'https://images.pexels.com/photos/90365/pexels-photo-90365.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 16
       }
     ]
@@ -122,32 +131,37 @@ const SHOP_DATA = {
     items: [
       {
         id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+        name: 'Boots 1',
+        imageUrl:
+          'https://images.pexels.com/photos/3022403/pexels-photo-3022403.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 125
       },
       {
         id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+        name: 'Boots 2',
+        imageUrl:
+          'https://images.pexels.com/photos/1662163/pexels-photo-1662163.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 90
       },
       {
         id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+        name: 'Boots 3',
+        imageUrl:
+          'https://images.pexels.com/photos/1485166/pexels-photo-1485166.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 90
       },
       {
         id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+        name: 'Boots 4',
+        imageUrl:
+          'https://images.pexels.com/photos/1467574/pexels-photo-1467574.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 165
       },
       {
         id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+        name: 'Boots 5',
+        imageUrl:
+          'https://images.pexels.com/photos/1755386/pexels-photo-1755386.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
         price: 185
       }
     ]
