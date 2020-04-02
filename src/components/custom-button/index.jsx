@@ -13,6 +13,7 @@ const buttonStyles = css`
     border: 1px solid black;
   }
 `;
+
 const invertedButtonStyles = css`
   background-color: white;
   color: black;
