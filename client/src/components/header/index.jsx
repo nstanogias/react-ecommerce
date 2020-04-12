@@ -15,14 +15,21 @@ const OptionStyles = css`
   padding: 10px 15px;
   cursor: pointer;
 `;
-const StyledHeader = styled.div`
+const HeaderContainer = styled.div`
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `;
-const ContainerLink = styled(Link)`
+
+const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
   padding: 25px;
@@ -30,14 +37,23 @@ const ContainerLink = styled(Link)`
   svg {
     height: 80px;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    padding: 0;
+  }
 `;
 
-const Options = styled.div`
+const OptionsContainer = styled.div`
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
 `;
 
 const OptionsLink = styled(Link)`
@@ -48,11 +64,11 @@ const OptionsDiv = styled.div`
   ${OptionStyles}
 `;
 const Header = ({ currentUser, hidden, signOutStart }) => (
-  <StyledHeader>
-    <ContainerLink to="/">
+  <HeaderContainer>
+    <LogoContainer to="/">
       <Logo />
-    </ContainerLink>
-    <Options>
+    </LogoContainer>
+    <OptionsContainer>
       <OptionsLink to="/shop">SHOP</OptionsLink>
       <OptionsLink to="/shop">CONTACT</OptionsLink>
       {currentUser ? (
@@ -61,18 +77,18 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
         <OptionsLink to="/signin">SIGN IN</OptionsLink>
       )}
       <CartIcon />
-    </Options>
+    </OptionsContainer>
     {hidden ? null : <CartDropdown />}
-  </StyledHeader>
+  </HeaderContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden: selectCartHidden
+  hidden: selectCartHidden,
 });
 
-const mapDispatchToProps = dispatch => ({
-  signOutStart: () => dispatch(signOutStart())
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
